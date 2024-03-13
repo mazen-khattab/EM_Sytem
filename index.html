@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./bootStrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="./bootStrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style/dash.css">
+</head>
+
+<body class="bg-light">
+
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-lg-4">
+                <div class="card shadow-lg">
+
+                    <div class="card-header bg-primary text-light">
+                        <p class="m-0">Login as admin</p>
+                    </div>
+
+                    <div class="card-body">
+                        <form action="./dash.html" id="form">
+                            <div class="form-floating mb-3 inputDiv">
+                                <input type="text" class="form-control loginInput" id="name" placeholder="Username" autofocus autocomplete="off">
+                                <label for="name">Username</label>
+                            </div>
+
+                            <div class="form-floating mb-3 inputDiv">
+                                <input type="password" class="form-control loginInput" id="password" placeholder="Password"
+                                    autofocus>
+                                <label for="Password">Password</label>
+                            </div>
+
+                            <div class="form-check mb-3">
+                                <input type="checkbox" id="check" class="form-check-input">
+                                <label for="check">Remember me</label>
+                            </div>
+
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-success" id="login">
+                                    <i class="fa-solid fa-right-to-bracket"></i>
+                                    Login as admin
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./bootStrap/js/bootstrap.bundle.js"></script>
+    <script src="./script/indexPage.js"></script>
+</body>
+
+</html>

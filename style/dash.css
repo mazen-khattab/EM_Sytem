@@ -1,0 +1,79 @@
+.navbar .navbar-brand {
+    color: transparent;
+    background: linear-gradient(to right, #00bfff, #03870d);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.navbar form a i {
+    padding: 2px;
+}
+
+#add-emp .form-input {
+    transition: 0.3s;
+}
+
+.wrong {
+    animation: wrong 1.5s forwards;
+}
+
+@keyframes wrong {
+    0% {
+        transform: translateX(0px);
+    }
+
+    10% {
+        transform: translateX(10px);
+    }
+
+    20% {
+        transform: translateX(-10px);
+    }
+
+    30% {
+        transform: translateX(10px);
+    }
+
+    40% {
+        transform: translateX(0);
+    }
+}
+
+.bigger, .young, .biggerEdit, .youngEdit{
+    color: red;
+    position: absolute;
+    top: 45px;
+    font-size: 14px;
+    display: none;
+}
+
+.invaildEmail, .invaildNum, .invaildEmailEdit, .invaildNumEdit{
+    color: red;
+    font-size: 14px;
+    position: absolute;
+    display: none;
+}
+
+.inputDiv {
+    border: 1px solid rgb(222, 226, 230);
+    border-radius: 7px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.inputDiv .loginInput {
+    border: none;
+}
+
+
+.empty {
+    color: #484848;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    padding: 20px 30px;
+    background-color: #ffc7c775;
+    border-radius: 5px;
+    display: none;
+}

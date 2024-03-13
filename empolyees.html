@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employees</title>
+    <link rel="stylesheet" href="./bootStrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="./style/dash.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark text-bg-dark">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="./dash.html">EMS2.0</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#links"
+                aria-controls="links" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="links">
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="./dash.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./empolyees.html">Employees</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./job.html">Jobs</a>
+                    </li>
+                </ul>
+                <div class="d-flex gap-3" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for..." id="search" autocomplete="off">
+                        <button type="button" class="btn btn-success">
+                            <i class="fa-solid fa-magnifying-glass text-white" id="searchBtn"></i>
+                        </button>
+                    </div>
+    
+                    <div class="vr "></div>
+    
+                    <a href="./index.html" class="text-decoration-none bg-warning text-black p-2 rounded">
+                        <i class="fa-solid fa-power-off"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-3">
+        <div class="row justify-content-center gap-4">
+            <div class="col-md-2">
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action active">
+                        Employees data
+                    </a>
+
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#add"
+                        class="list-group-item list-group-item-action">Add
+                        Employees</button>
+
+                    <div class="modal fade" id="add" data-bs-backdrop="static">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header text-bg-dark">
+                                    <h3>Add Employee</h3>
+                                    <button type="button" class="btn-close btn-close-white"
+                                        data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="add-emp">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="mb-4">
+                                                    <input type="date" class="form-control form-control-sm form-input">
+                                                    <p class="bigger">Invaild Age!!</p>
+                                                    <p class="young">the age must be over 18</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="mb-4">
+                                                    <input type="text" class="form-control form-control-sm form-input"
+                                                        placeholder="First Name" id="fname" autocomplete="off">
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="mb-4">
+                                                    <input type="text" class="form-control form-control-sm form-input"
+                                                        placeholder="Last Name" id="lname" autocomplete="off">
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="mb-4">
+                                                    <input type="email" class="form-control form-control-sm form-input"
+                                                        placeholder="Email" required>
+                                                    <p class="invaildEmail">Invaild Email</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="mb-4">
+                                                    <input type="text" class="form-control form-control-sm form-input"
+                                                        placeholder="Phone number" id="num" autocomplete="off">
+                                                    <p class="invaildNum">Invaild Phone number</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="mb-4">
+                                                    <Select class="form-select form-select-sm form-input" id="select">
+                                                        <option value="-1" hidden disabled selected>Your
+                                                            current job</option>
+                                                        <option value="1">Graphic Designer</option>
+                                                        <option value="2">Developer</option>
+                                                        <option value="3">Full Stack Developer</option>
+                                                        <option value="4">Front End Developer</option>
+                                                        <option value="5">Back End Developer</option>
+                                                        <option value="6">IT Technician</option>
+                                                        <option value="7">Data Scientist</option>
+                                                    </Select>
+                                                </div>
+                                            </div>
+                                            <div class="col-9">
+                                                <button type="button" id="add-btn"
+                                                    class="btn btn-success btn-sm w-100">Add
+                                                    Employee</button>
+                                            </div>
+                                            <div class="col-3">
+                                                <button type="button" id="close-btn"
+                                                    class="btn btn-warning btn-sm w-100"
+                                                    data-bs-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="list-group mt-3">
+                    <a href="#" class="list-group-item list-group-item-action active">
+                        Reladed Links
+                    </a>
+                    <a href="./job.html" class="list-group-item list-group-item-action">Jobs List</a>
+                </div>
+            </div>
+
+            <div class="col-md-8 table-responsive">
+                <table class="table caption-top table-bordered ">
+                    <caption class="text-bg-dark text-center rounded-top">Employees List</caption>
+                    <thead class="table-secondary">
+                        <tr>
+                            <th>#</th>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email ID</th>
+                            <th>Details</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody class="align-middle bodyTable">
+                    </tbody>
+                </table>
+                <p class="empty">There is no employees with name <span></span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- #region modal-->
+    <div class="modal fade" id="details" style="backdrop-filter: blur(5px);" tabindex="-1">
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content">
+
+                <div class="modal-header text-bg-dark">
+                    <h3>Employee Details</h3>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body p-0">
+                    <table class="table table-bordered m-0 detailsTable">
+                        <tr>
+                            <th>ID</th>
+                            <td class="td"></td>
+                        </tr>
+                        <tr>
+                            <th>Empolyee ID</th>
+                            <td class="td" id="detailsId"></td>
+                        </tr>
+                        <tr>
+                            <th>First Name</th>
+                            <td class="td"></td>
+                        </tr>
+                        <tr>
+                            <th>Last Name</th>
+                            <td class="td"></td>
+                        </tr>
+                        <tr>
+                            <th>Email</th>
+                            <td class="td"></td>
+                        </tr>
+                        <tr>
+                            <th>Phone Number</th>
+                            <td class="td"></td>
+                        </tr>
+                        <tr>
+                            <th>Joingin Data</th>
+                            <td class="td"></td>
+                        </tr>
+                        <tr>
+                            <th>Job</th>
+                            <td class="td"></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning editDetailsBtn" data-bs-target="#edit-details"
+                        data-bs-toggle="modal">Edit
+                        Details</button>
+
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="edit-details" data-bs-backdrop="static" style="backdrop-filter: blur(5px);">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header text-bg-dark">
+                    <h3>Edit Employee</h3>
+                    <button type="button" data-bs-dismiss="modal" class="btn-close btn-close-white"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="edit-form">
+                        <div class="row">
+                            <!-- joining data -->
+                            <div class="col-12">
+                                <div class="mb-4">
+                                    <input type="date" value="2009-12-09"
+                                        class="form-control form-control-sm edit-input">
+                                    <p class="biggerEdit">Invaild Age!!</p>
+                                    <p class="youngEdit">the age must be over 18</p>
+                                </div>
+                            </div>
+                            <!-- first name -->
+                            <div class="col-md-6">
+                                <div class="mb-4">
+                                    <input type="text" class="form-control form-control-sm edit-input" value="John"
+                                        placeholder="First Name">
+                                </div>
+                            </div>
+                            <!-- last name -->
+                            <div class="col-md-6">
+                                <div class="mb-4">
+                                    <input type="text" class="form-control form-control-sm edit-input" value="Doe"
+                                        placeholder="Last Name">
+                                </div>
+                            </div>
+                            <!-- email -->
+                            <div class="col-md-6">
+                                <div class="mb-4">
+                                    <input type="email" class="form-control form-control-sm edit-input"
+                                        value="johndoe@gmail.com" placeholder="Email">
+                                    <p class="invaildEmailEdit">Invaild Email</p>
+                                </div>
+                            </div>
+                            <!-- phone number -->
+                            <div class="col-md-6">
+                                <div class="mb-4">
+                                    <input type="text" class="form-control form-control-sm edit-input" value="123456789"
+                                        placeholder="Phone number">
+                                    <p class="invaildNumEdit">Invaild Phone number</p>
+                                </div>
+                            </div>
+                            <!-- job -->
+                            <div class="col-12">
+                                <div class="mb-4">
+                                    <Select class="form-select form-select-sm edit-input">
+                                        <option value="-1" hidden disabled selected>Your
+                                            current job</option>
+                                        <option value="1">Graphic Designer</option>
+                                        <option value="2">Developer</option>
+                                        <option value="3">Full Stack Developer</option>
+                                        <option value="4">Front End Developer</option>
+                                        <option value="5">Back End Developer</option>
+                                        <option value="6">IT Technician</option>
+                                        <option value="7">Data Scientist</option>
+                                    </Select>
+                                </div>
+                            </div>
+                            <!-- button updata -->
+                            <div class="col-9">
+                                <button type="button" class="btn btn-success w-100 btn-sm" id="update" >Update
+                                    Employee</button>
+                            </div>
+                            <!-- button discard -->
+                            <div class="col-3">
+                                <button type="button" class="btn btn-warning  btn-sm w-100"
+                                    data-bs-dismiss="modal">Discard</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="del" data-bs-backdrop="static" style="backdrop-filter: blur(5px);">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="fs-5 m-0 fw-light">Do you want to delete <span class="fs-3 fw-bold"
+                            id="deletedEmpName">"John Doe"</span>?</p>
+                    <button type="button" data-bs-dismiss="modal" class="btn-close btn-dark"></button>
+                </div>
+
+                <div class="modal-body text-center">
+                    <button type="button" class="btn btn-danger yes" id="yes" data-bs-dismiss="modal">YES!</button>
+                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">No, Go back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- #endregion -->
+
+    <script src="./bootStrap/js/bootstrap.bundle.js"></script>
+    <script src="./script/empPage.js"></script>
+</body>
+
+</html>

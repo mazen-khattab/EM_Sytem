@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dash</title>
+    <link rel="stylesheet" href="./bootStrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="./style/dash.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="./dash.html">EMS2.0</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#links"
+                aria-controls="links" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="links">
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./dash.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./empolyees.html">Employees</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./job.html">Jobs</a>
+                    </li>
+                </ul>
+                
+                <a href="./index.html" class="text-decoration-none bg-warning text-black p-2 rounded">
+                    <i class="fa-solid fa-power-off"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row justify-content-center mt-3">
+            <div class="col-md-3 mb-3">
+                <div class="card text-white bg-primary text-center">
+                    <div class="card-header ">
+                        <p class="m-0">Employees List</p>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="card-text p-3">
+                            <h1 class="m-0 empCount"></h1>
+                        </div>
+                    </div>
+
+                    <div class="card-footer d-grid">
+                        <a href="./empolyees.html" class="text-white text-decoration-none">View all Employees</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-white bg-primary text-center">
+                    <div class="card-header ">
+                        <p class="m-0">jobs List</p>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="card-text p-3">
+                            <h1 class="m-0 jobCount"></h1>
+                        </div>
+                    </div>
+
+                    <div class="card-footer d-grid">
+                        <a href="./job.html" class="text-white text-decoration-none">View all jobs</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./bootStrap/js/bootstrap.bundle.js"></script>
+    <script src="./script/deshPage.js"></script>
+</body>
+
+</html>
